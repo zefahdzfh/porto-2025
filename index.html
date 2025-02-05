@@ -19,61 +19,53 @@
 
 <body class="bg-gray-100">
 
-    <nav class="flex items-center justify-between py-5 px-4 bg-gray-100 sticky top-0 z-50 shadow-md" id="navbar">
-        <img src="assets/image/logo za.png" alt="Logo" class="h-8">
-        
-        <div class="hidden md:flex space-x-8">
-            <!-- About Link -->
-            <a href="#about" class="text-md font-medium hover:text-gray-600">About</a>
-            
-            <!-- Project Dropdown -->
-            <div class="relative">
-                <button class="text-md font-medium hover:text-gray-600 focus:outline-none" id="project-dropdown-button">
-                    Project
+    <nav class="border-gray-200 fixed top-0 w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto flex flex-wrap items-center justify-between py-3">
+            <a href="#" class="flex">
+                <img src="assets/image/logo za.png" alt="Logo" class="h-8">
+            </a>
+            <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 5h14M3 10h14M3 15h14" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
+                <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+                    <li>
+                        <button id="downloadCV"
+                    class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">
+                    Get my CV
                 </button>
-                <div class="absolute hidden mt-2 w-48 bg-white text-gray-900 shadow-lg rounded-md top-full left-0" id="project-dropdown">
-                    <a href="andro.html" class="block px-4 py-2 hover:bg-gray-100">Android Apps</a>
-                    <a href="web.html" class="block px-4 py-2 hover:bg-gray-100">Website</a>
-                    <a href="design.html" class="block px-4 py-2 hover:bg-gray-100">Design</a>
-                </div>
-            </div>
-            
-            <!-- Contact Link -->
-            <a href="#contact" class="text-md font-medium hover:text-gray-600">Contact</a>
-        </div>
-    
-        <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden absolute top-0 left-0 w-full bg-gray-100 text-gray-900 hidden">
-            <div class="flex flex-col space-y-4 p-6">
-                <!-- About Link -->
-                <a href="#about" class="text-md font-medium hover:text-gray-600">About</a>
-    
-                <!-- Project Dropdown -->
-                <div class="relative">
-                    <button class="text-md font-medium hover:text-gray-600 focus:outline-none" id="mobile-project-dropdown-button">
-                        Project
-                    </button>
-                    <div class="absolute hidden mt-2 w-48 bg-white text-gray-900 shadow-lg rounded-md top-full left-0" id="mobile-project-dropdown">
-                        <a href="andro.html" class="block px-4 py-2 hover:bg-gray-100">Android Apps</a>
-                        <a href="web.html" class="block px-4 py-2 hover:bg-gray-100">Website</a>
-                        <a href="design.html" class="block px-4 py-2 hover:bg-gray-100">Design</a>
-                    </div>
-                </div>
-    
-                <!-- Contact Link -->
-                <a href="#contact" class="text-md font-medium hover:text-gray-600">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="text-black block pl-3 pr-4 py-2 md:p-0 rounded hover:text-gray-600">About</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-black hover:text-gray-600 pl-3 pr-4 py-2 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Project 
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                            <ul class="py-1">
+                                <li><a href="andro.html" class="text-sm hover:text-gray-600 text-black block px-4 py-2">Android Apps</a></li>
+                                <li><a href="web.html" class="text-sm hover:text-gray-600 text-black block px-4 py-2">Websites</a></li>
+                                <li><a href="design.html" class="text-sm hover:text-gray-600 text-black block px-4 py-2">Designs</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="text-black block pl-3 pr-4 py-2 md:p-0 hover:text-gray-600">Certifications</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
+    
+      
 
-    <section class="py-10 md:py-16">
+    <section class="py-24 md:py-40">
 
         <div class="container max-w-screen-xl mx-auto px-4">
 
@@ -108,7 +100,7 @@
 
             <div class="flex flex-col lg:flex-row justify-between">
                 <div class="mb-10 lg:mb-0">
-                    <h1 class="font-medium text-gray-900 text-4xl md:text-4xl mb-5">About Me</h1>
+                    <h1 class="font-medium text-gray-900 text-4xl md:text-4xl mb-5" id="about">About Me</h1>
 
                     <p class="font-normal text-gray-700 text-xl md:text-xl">
                         My name is Hudzaifah Ibnu Puase, commonly
@@ -172,120 +164,15 @@
 
     </section>
 
+    
+    
+    
     <section class="py-10 md:py-16">
-
+        
         <div class="container max-w-screen-xl mx-auto px-4">
-
-            <div class="flex flex-col lg:flex-row justify-between">
-                <div class="mb-10 lg:mb-0">
-                    <h1 class="font-medium text-gray-900 text-4xl md:text-4xl mb-5">Projects</h1>
-
-                    <p class="font-normal text-gray-700 text-xl md:text-xl">
-                        Here are the projects that I have successfully completed, showcasing my skills and dedication in
-                        each endeavor
-                    </p>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Card 1 -->
-                        <a href="andro.html"
-                            class="block bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                            <div class="relative w-full h-32 mb-4">
-                                <img src="assets/image/ikea.png" alt="Android App"
-                                    class="absolute inset-0 w-full h-full object-cover rounded-md">
-                            </div>
-                            <h4 class="font-medium text-gray-700 text-lg mb-4">Android App</h4>
-                            <p class="font-normal text-gray-500 text-md">I am experienced in developing Android
-                                applications using Flutter, ensuring high performance and seamless user experiences. For
-                                more details on my work, click here to explore further</p>
-                        </a>
-
-                        <!-- Card 2 -->
-                        <a href="web.html"
-                            class="block bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                            <div class="relative w-full h-32 mb-4">
-                                <img src="assets/image/web.jpg" alt="Website"
-                                    class="absolute inset-0 w-full h-full object-cover rounded-md">
-                            </div>
-                            <h4 class="font-medium text-gray-700 text-lg mb-4">Website</h4>
-                            <p class="font-normal text-gray-500 text-md">I specialize in building dynamic and responsive
-                                websites with HTML, CSS, JS, React, and others. Click here to learn more about my work
-                            </p>
-                        </a>
-
-                        <!-- Card 3 -->
-                        <a href="design.html"
-                            class="block bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                            <div class="relative w-full h-32 mb-4">
-                                <img src="assets/image/toped.png" alt="Design"
-                                    class="absolute inset-0 w-full h-full object-cover rounded-md">
-                            </div>
-                            <h4 class="font-medium text-gray-700 text-lg mb-4">Design</h4>
-                            <p class="font-normal text-gray-500 text-md">I specialize in creating visually appealing
-                                designs using Figma, PixelLab, and Canva—whether for Instagram posts, banners, or
-                                apparel. Click here to explore my work.</p>
-                        </a>
-                    </div>
-
-
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="py-10 md:py-16">
-
-        <div class="container max-w-screen-xl mx-auto px-4">
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-50 px-8 py-10 rounded-md">
-                    <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                        <i data-feather="activity"></i>
-                    </div>
-
-                    <h4 class="font-medium text-gray-700 text-lg mb-4">High experience</h4>
-
-                    <p class="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br> adipiscing
-                        elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="bg-gray-50 px-8 py-10 rounded-md">
-                    <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                        <i data-feather="codesandbox"></i>
-                    </div>
-
-                    <h4 class="font-medium text-gray-700 text-lg mb-4">Useful sandboxes</h4>
-
-                    <p class="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br> adipiscing
-                        elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="bg-gray-50 px-8 py-10 rounded-md">
-                    <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                        <i data-feather="coffee"></i>
-                    </div>
-
-                    <h4 class="font-medium text-gray-700 text-lg mb-4">Success side projects</h4>
-
-                    <p class="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br> adipiscing
-                        elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="py-10 md:py-16">
-
-        <div class="container max-w-screen-xl mx-auto px-4">
-
+            
             <h1 class="font-medium text-gray-900 text-4xl md:text-4xl mb-5">Education</h1>
-
+            
             <p class="font-normal text-gray-700 text-xl mb-10">Below is a summary of the places I studied
             </p>
 
@@ -293,7 +180,7 @@
                 <div class="bg-gray-50 px-8 py-10 rounded-md">
                     <h4 class="font-medium text-gray-700 text-md mb-4">2013 – 2019</h4>
                     <h4 class="font-medium text-gray-900 text-xl mb-4">An-Nash Islamic Elementary School Jakarta</h4>
-
+                    
                     <p class="font-normal text-gray-500 text-md mb-4">
                         Third Generation
                     <div class="relative">
@@ -306,52 +193,117 @@
                 <div class="bg-gray-50 px-8 py-10 rounded-md">
                     <h4 class="font-medium text-gray-700 text-md mb-4">2019 – 2022</h4>
                     <h4 class="font-medium text-gray-900 text-xl mb-4">Aminah Islamic Boarding School Jakarta</h4>
-
+                    
                     <p class="font-normal text-gray-500 text-md mb-4">
                         Fifth Generation
-                    <div class="relative">
-                        <a href="https://aminahboardingschool.com/">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                        </a>
-                        <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        <div class="relative">
+                            <a href="https://aminahboardingschool.com/">
+                                <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                            </a>
+                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="bg-gray-50 px-8 py-10 rounded-md">
-                    <h4 class="font-medium text-gray-700 text-md mb-4">2022-2024</h4>
-                    <h4 class="font-medium text-gray-900 text-xl mb-4">Madinatul Qur'an Vocational High School Jonggol
-                    </h4>
-
-                    <p class="font-normal text-gray-500 text-md mb-4">
-                        Eighth Generation - Software Engineering Department
-                    <div class="relative">
-                        <a href="https://smkmadinatulquran.sch.id/">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                        </a>
-                        <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                    <div class="bg-gray-50 px-8 py-10 rounded-md">
+                        <h4 class="font-medium text-gray-700 text-md mb-4">2022-2024</h4>
+                        <h4 class="font-medium text-gray-900 text-xl mb-4">Madinatul Qur'an Vocational High School Jonggol
+                        </h4>
+                        
+                        <p class="font-normal text-gray-500 text-md mb-4">
+                            Eighth Generation - Software Engineering Department
+                            <div class="relative">
+                                <a href="https://smkmadinatulquran.sch.id/">
+                                    <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                                </a>
+                                <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-8 py-10 rounded-md">
+                            <h4 class="font-medium text-gray-700 text-md mb-4">2024 - 2025</h4>
+                            <h4 class="font-medium text-gray-900 text-xl mb-4">Angkasa 1 Vocational High School Jakarta</h4>
+                            
+                            <p class="font-normal text-gray-500 text-md mb-4">
+                                Second Generation - Software Engineering Department
+                                <div class="relative">
+                                    <a href="https://smkangkasa1jakarta.sch.id/">
+                                        <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                                    </a>
+                                    <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
                     </div>
-                </div>
-                <div class="bg-gray-50 px-8 py-10 rounded-md">
-                    <h4 class="font-medium text-gray-700 text-md mb-4">2024 - 2025</h4>
-                    <h4 class="font-medium text-gray-900 text-xl mb-4">Angkasa 1 Vocational High School Jakarta</h4>
+                    
+                </section>
 
-                    <p class="font-normal text-gray-500 text-md mb-4">
-                        Second Generation - Software Engineering Department
-                    <div class="relative">
-                        <a href="https://smkangkasa1jakarta.sch.id/">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                        </a>
-                        <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+
+                <section class="py-10 md:py-16">
+            
+                    <div class="container max-w-screen-xl mx-auto px-4">
+            
+                        <div class="flex flex-col lg:flex-row justify-between">
+                            <div class="mb-10 lg:mb-0">
+                                <h1 class="font-medium text-gray-900 text-4xl md:text-4xl mb-5">Projects</h1>
+            
+                                <p class="font-normal text-gray-700 text-xl md:text-xl">
+                                    Here are the projects that I have successfully completed, showcasing my skills and dedication in
+                                    each endeavor
+                                </p>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- Card 1 -->
+                                    <a href="andro.html"
+                                        class="block bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                                        <div class="relative w-full h-32 mb-4">
+                                            <img src="assets/image/ikea.png" alt="Android App"
+                                                class="absolute inset-0 w-full h-full object-cover rounded-md">
+                                        </div>
+                                        <h4 class="font-medium text-gray-700 text-lg mb-4">Android App</h4>
+                                        <p class="font-normal text-gray-500 text-md">I am experienced in developing Android
+                                            applications using Flutter, ensuring high performance and seamless user experiences. For
+                                            more details on my work, click here to explore further</p>
+                                    </a>
+            
+                                    <!-- Card 2 -->
+                                    <a href="web.html"
+                                        class="block bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                                        <div class="relative w-full h-32 mb-4">
+                                            <img src="assets/image/web.jpg" alt="Website"
+                                                class="absolute inset-0 w-full h-full object-cover rounded-md">
+                                        </div>
+                                        <h4 class="font-medium text-gray-700 text-lg mb-4">Website</h4>
+                                        <p class="font-normal text-gray-500 text-md">I specialize in building dynamic and responsive
+                                            websites with HTML, CSS, JS, React, and others. Click here to learn more about my work
+                                        </p>
+                                    </a>
+            
+                                    <!-- Card 3 -->
+                                    <a href="design.html"
+                                        class="block bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                                        <div class="relative w-full h-32 mb-4">
+                                            <img src="assets/image/toped.png" alt="Design"
+                                                class="absolute inset-0 w-full h-full object-cover rounded-md">
+                                        </div>
+                                        <h4 class="font-medium text-gray-700 text-lg mb-4">Design</h4>
+                                        <p class="font-normal text-gray-500 text-md">I specialize in creating visually appealing
+                                            designs using Figma, PixelLab, and Canva—whether for Instagram posts, banners, or
+                                            apparel. Click here to explore my work.</p>
+                                    </a>
+                                </div>
+            
+            
+                            </div>
+                        </div>
+            
                     </div>
-                </div>
+            
+                </section>
 
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="py-10 md:py-16">
+    <!-- <section class="py-10 md:py-16">
 
         <div class="container max-w-screen-xl mx-auto px-4">
 
@@ -575,7 +527,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
     </footer>
 
@@ -600,39 +552,72 @@
         mobileMenu.classList.toggle("hidden");
     });
 
-    // Project dropdown toggle for mobile view
-    const mobileProjectButton = document.getElementById("mobile-project-dropdown-button");
-    const mobileProjectDropdown = document.getElementById("mobile-project-dropdown");
+    // // Project dropdown toggle for mobile view
+    // const mobileProjectButton = document.getElementById("mobile-project-dropdown-button");
+    // const mobileProjectDropdown = document.getElementById("mobile-project-dropdown");
 
-    mobileProjectButton.addEventListener('click', () => {
-        mobileProjectDropdown.classList.toggle("hidden");
-    });
+    // mobileProjectButton.addEventListener('click', () => {
+    //     mobileProjectDropdown.classList.toggle("hidden");
+    // });
 
-    // Project dropdown toggle for desktop view
-    const projectButton = document.getElementById("project-dropdown-button");
-    const projectDropdown = document.getElementById("project-dropdown");
+    // // Project dropdown toggle for desktop view
+    // const projectButton = document.getElementById("project-dropdown-button");
+    // const projectDropdown = document.getElementById("project-dropdown");
 
-    projectButton.addEventListener('click', () => {
-        projectDropdown.classList.toggle("hidden");
-    });
+    // projectButton.addEventListener('click', () => {
+    //     projectDropdown.classList.toggle("hidden");
+    // });
 
-    // Navbar hide on scroll down and show on scroll up
-    let lastScrollTop = 0;
-    const navbar = document.getElementById("navbar");
+    // // Navbar hide on scroll down and show on scroll up
+    // let lastScrollTop = 0;
+    // const navbar = document.getElementById("navbar");
 
-    window.addEventListener("scroll", function () {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // window.addEventListener("scroll", function () {
+    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
-            navbar.classList.add("hidden"); // Hide navbar when scrolling down
-        } else {
-            navbar.classList.remove("hidden"); // Show navbar when scrolling up
-        }
+    //     if (scrollTop > lastScrollTop) {
+    //         navbar.classList.add("hidden"); // Hide navbar when scrolling down
+    //     } else {
+    //         navbar.classList.remove("hidden"); // Show navbar when scrolling up
+    //     }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent navbar from hiding when at the top
-    });
-    });
+    //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent navbar from hiding when at the top
+    // });
+
+    document.addEventListener("DOMContentLoaded", function () {
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+  const mobileDropdown = document.getElementById("mobile-dropdown");
+
+  // Hide Navbar on Scroll Down, Show on Scroll Up
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      navbar.style.transform = "translateY(-100%)";
+    } else {
+      navbar.style.transform = "translateY(0)";
+    }
+    lastScrollTop = scrollTop;
+  });
+
+  // Toggle Mobile Menu
+  menuBtn.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Toggle Mobile Dropdown
+  mobileDropdownBtn.addEventListener("click", function () {
+    mobileDropdown.classList.toggle("hidden");
+  });
+});
+
+    
     </script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
 
 </body>
 
