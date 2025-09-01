@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZePorto</title>
     <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="loading.css">
+    <style>
+    /* Contoh style overlay */
+    #loading-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      z-index: 9999;
+    }
+  </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -18,6 +34,17 @@
 </head>
 
 <body class="bg-gray-100">
+    <!-- Overlay Loading -->
+  <div id="loading-overlay">
+  <!-- Spinner -->
+  <div class="spinner"></div>
+
+  <!-- Tulisan utama -->
+  <h2>Loading</h2>
+
+  <!-- Tulisan kecil -->
+  <p>Please kindly wait...</p>
+</div>
 
     <nav id="navbar" class="border-gray-200 fixed top-0 w-full z-50 bg-white shadow-md transition-transform">
         <div class="container mx-auto flex flex-wrap items-center justify-between py-3 px-5">
@@ -63,14 +90,14 @@
 
 
 
-    <section class="py-24 md:py-40">
+    <section class="py-24 md:py-24">
 
         <div class="container max-w-screen-xl mx-auto px-4">
 
 
             <div class="text-center">
                 <div class="flex justify-center mb-10">
-                    <img src="assets/image/home-img.png" alt="Image" class="w-52 h-52 rounded-full object-cover">
+                    <img src="assets/image/ppgwe.png" alt="Image" class="w-52 h-52 rounded-full object-cover">
                 </div>
 
 
@@ -230,6 +257,19 @@
                         Second Generation - Software Engineering Department
                     <div class="relative">
                         <a href="https://smkangkasa1jakarta.sch.id/">
+                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
+                        </a>
+                        <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-medium text-gray-700 text-md mb-4">2025-Present</h4>
+                    <h4 class="font-medium text-gray-900 text-xl mb-4">UPN Veteran Jakarta</h4>
+
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        30th Generation - Information Systems (Associate Degree Program)
+                    <div class="relative">
+                        <a href="https://www.upnvj.ac.id/">
                             <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
                         </a>
                         <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
@@ -631,6 +671,7 @@
 
     </script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
