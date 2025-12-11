@@ -10,19 +10,31 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="loading.css">
     <style>
-    /* Contoh style overlay */
-    #loading-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(255,255,255,0.9);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      z-index: 9999;
-    }
-  </style>
+        /* INI KUNCINYA BIAR MULUS */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Biar pas nyampe, judulnya gak ketutupan navbar (kasih jarak dikit) */
+        section, footer {
+            scroll-margin-top: 80px;
+        }
+
+        /* Style Overlay Loading (Yg lama) */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            z-index: 9999;
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -35,60 +47,18 @@
 
 <body class="bg-gray-100">
     <!-- Overlay Loading -->
-  <div id="loading-overlay">
-  <!-- Spinner -->
-  <div class="spinner"></div>
+    <div id="loading-overlay">
+        <!-- Spinner -->
+        <div class="spinner"></div>
 
-  <!-- Tulisan utama -->
-  <h2>Loading</h2>
+        <!-- Tulisan utama -->
+        <h2>Loading</h2>
 
-  <!-- Tulisan kecil -->
-  <p>Please kindly wait...</p>
-</div>
+        <!-- Tulisan kecil -->
+        <p>Please kindly wait...</p>
+    </div>
 
-    <nav id="navbar" class="border-gray-200 fixed top-0 w-full z-50 bg-white shadow-md transition-transform">
-        <div class="container mx-auto flex flex-wrap items-center justify-between py-3 px-5">
-            <a href="#" class="flex">
-                <img src="assets/image/logo za.png" alt="Logo" class="h-8">
-            </a>
-            <!-- Tombol Hamburger -->
-            <button id="menu-toggle" type="button"
-                class="md:hidden text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 5h14M3 10h14M3 15h14"></path>
-                </svg>
-            </button>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:space-x-8 absolute md:relative top-1 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-5 md:p-0">
-                <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8">
-                    <li><a href="#about" class="text-black block hover:text-gray-600">About</a></li>
-                    <li>
-                        <button id="dropdownNavbarLink" class="text-black hover:text-gray-600 flex items-center">
-                            Project
-                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <div id="dropdownNavbar" class="hidden bg-white shadow-md rounded-md mt-2 p-2">
-                            <ul class="space-y-2">
-                                <li><a href="andro.html" class="text-sm hover:text-gray-600 block px-4 py-2">Android Apps</a></li>
-                                <li><a href="web.html" class="text-sm hover:text-gray-600 block px-4 py-2">Websites</a></li>
-                                <li><a href="design.html" class="text-sm hover:text-gray-600 block px-4 py-2">Designs</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#" class="text-black block hover:text-gray-600">Certifications</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-
-
+    <div id="navbar-placeholder"></div>
 
     <section class="py-24 md:py-24">
 
@@ -130,26 +100,29 @@
 
         <div class="container max-w-screen-xl mx-auto px-4">
 
-            <div class="flex flex-col lg:flex-row justify-between">
+            <div id="about" class="flex flex-col lg:flex-row justify-between">
                 <div class="mb-10 lg:mb-0">
-                    <h1 class="font-medium text-gray-900 text-4xl md:text-4xl mb-5" id="about">About Me</h1>
+                    <h1 class="font-medium text-gray-900 text-4xl md:text-4xl mb-5" >About Me</h1>
 
                     <p class="font-normal text-gray-700 text-xl md:text-xl">
-                        My name is Hudzaifah Ibnu Puase, commonly
-                        known as Zefa, and I am an individual skilled in fostering friendships, being communicative, and
-                        taking responsibility. I excel in leading and directing teams effectively while providing clear
-                        and actionable instructions. Additionally, I enjoy expressing ideas through a unique and
-                        engaging communication style.
+                        Hello! I’m Hudzaifah Ibnu Puase, also known as Zefa. I’m an Odoo Functional Certified and a
+                        first-year Information Systems student at the National Development University “Veteran” Jakarta
+                        (UPNVJ). I’m currently the President of the Computer Science Class of 2025, a role that
+                        strengthens my ability to lead, coordinate, and support others.
                     </p>
                     <br>
                     <p class="font-normal text-gray-700 text-xl md:text-xl">
-                        I excel in leading teams, providing clear instructions, and delivering results, always striving
-                        to give my best in every opportunity. My vision for the future is fueled by my creativity and
-                        ambition. I’m passionate about using my skills to make a difference and enjoy sharing my ideas
-                        in an engaging way. Connecting with others is something I cherish, and I’m excited about the
-                        path ahead as I continue to grow and achieve my goals.
+                        I’m an easygoing, communicative, and adaptive person who enjoys working with people and building
+                        strong teamwork dynamics. I take responsibility seriously and strive to guide teams with
+                        clarity, structure, and intention. Leadership, for me, means listening, understanding, and
+                        helping others grow alongside me.
                     </p>
                     <br>
+                    <p class="font-normal text-gray-700 text-xl md:text-xl">
+                        I’m passionate about UI/UX design, web development, mobile development, and ERP systems, and I
+                        love turning ideas into meaningful digital solutions. I’m driven by curiosity, creativity, and
+                        the desire to make an impact through the things I build.
+                    </p>
 
                 </div>
 
@@ -428,7 +401,82 @@
 
     </section>
 
-<!-- 
+    <section id="certifications" class="py-10 md:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            
+            <div class="mb-10 text-left">
+                <h1 class="font-medium text-gray-900 text-3xl md:text-4xl mb-5">Certifications</h1>
+                <p class="font-normal text-gray-500 text-xs md:text-base">
+                    Here are some professional certifications I have earned to validate my skills.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-100">
+                    <a href="" target="_blank" class="block w-full h-40 mb-6 overflow-hidden rounded-md bg-white flex items-center justify-center border border-gray-100">
+                        <img src="assets/image/odoo.png" alt="Odoo Cert" class="h-full object-contain p-2">
+                    </a>
+                    
+                    <h4 class="font-medium text-gray-900 text-xl mb-2">Odoo Functional Certified</h4>
+                    <p class="font-normal text-gray-500 text-sm mb-4">Issued by Arkana • 2024</p>
+                    
+                    <div class="relative inline-block">
+                        <a href="https://www.linkedin.com/in/hudzaifah-ibnu-puase-a30586258/details/certifications/1730687305890/single-media-viewer/?profileId=ACoAAD9x8kQBR1xRphD25IgHuDtYF6QfVfXKGxs" target="_blank">
+                            <h6 class="font-semibold text-blue-600 text-sm relative z-10 hover:text-blue-800 flex items-center">
+                                Show Credential <i data-feather="external-link" class="w-3 h-3 ml-1"></i>
+                            </h6>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-100">
+                    <a href="" target="_blank" class="block w-full h-40 mb-6 overflow-hidden rounded-md bg-white flex items-center justify-center border border-gray-100">
+                        <img src="assets/image/lsp.png" alt="BNSP Cert" class="h-full object-contain p-2">
+                    </a>
+                    
+                    <h4 class="font-medium text-gray-900 text-xl mb-2">Junior Web Developer</h4>
+                    <p class="font-normal text-gray-500 text-sm mb-4">Issued by BNSP • 2025</p>
+                    
+                    <div class="relative inline-block">
+                        <a href="https://www.linkedin.com/in/hudzaifah-ibnu-puase-a30586258/details/certifications/238457683/multiple-media-viewer/?profileId=ACoAAD9x8kQBR1xRphD25IgHuDtYF6QfVfXKGxs&treasuryMediaId=1765470016684" target="_blank">
+                            <h6 class="font-semibold text-blue-600 text-sm relative z-10 hover:text-blue-800 flex items-center">
+                                Show Credential <i data-feather="external-link" class="w-3 h-3 ml-1"></i>
+                            </h6>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg border border-gray-100">
+                    <a href="" target="_blank" class="block w-full h-40 mb-6 overflow-hidden rounded-md bg-white flex items-center justify-center border border-gray-100">
+                        <img src="assets/image/dicoding.png" alt="Other Cert" class="h-full object-contain p-2">
+                    </a>
+                    
+                    <h4 class="font-medium text-gray-900 text-xl mb-2">Basic AI Course</h4>
+                    <p class="font-normal text-gray-500 text-sm mb-4">Issued by Dicoding • 2025</p>
+                    
+                    <div class="relative inline-block">
+                        <a href="https://www.dicoding.com/certificates/2VX35L51JPYQ" target="_blank">
+                            <h6 class="font-semibold text-blue-600 text-sm relative z-10 hover:text-blue-800 flex items-center">
+                                Show Credential <i data-feather="external-link" class="w-3 h-3 ml-1"></i>
+                            </h6>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-start">
+                <a href="https://www.linkedin.com/in/hudzaifah-ibnu-puase-a30586258/details/certifications/" target="_blank" 
+                   class="px-7 py-3 bg-white font-medium text-gray-700 text-md rounded-md border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700 hover:border-blue-200 transition ease-linear duration-300 flex items-center gap-2">
+                    See All Certifications <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 
     <section class="py-10 md:py-16">
 
         <div class="container max-w-screen-xl mx-auto px-4">
@@ -527,7 +575,7 @@
 
     <footer class="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
 
-        <div class="container max-w-screen-xl mx-auto px-4">
+        <div id="contact" class="container max-w-screen-xl mx-auto px-4">
 
             <div class="text-center">
                 <h1 class="font-medium text-gray-700 text-4xl md:text-5xl mb-5">Contact Me</h1>
@@ -574,102 +622,30 @@
                 </div>
             </div>
 
-        </div> 
+        </div>
 
     </footer>
 
 
     <script>
-        feather.replace()
-
-        document.getElementById("downloadCV").addEventListener("click", function () {
-            const link = document.createElement("a");
-            link.href = "assets/CV Zefa.pdf"; // Ganti dengan path CV yang benar
-            link.download = "CV_Hudzaifah.pdf"; // Nama file saat diunduh
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-
-        // // Mobile menu toggle
-        // const menuButton = document.getElementById("menu-toggle");
-        // const mobileMenu = document.getElementById("mobile-menu");
-
-        // menuButton.addEventListener("click", () => {
-        //     mobileMenu.classList.toggle("hidden");
-        // });
-
-        // // Project dropdown toggle for mobile view
-        // const mobileProjectButton = document.getElementById("mobile-project-dropdown-button");
-        // const mobileProjectDropdown = document.getElementById("mobile-project-dropdown");
-
-        // mobileProjectButton.addEventListener('click', () => {
-        //     mobileProjectDropdown.classList.toggle("hidden");
-        // });
-
-        // // Project dropdown toggle for desktop view
-        // const projectButton = document.getElementById("project-dropdown-button");
-        // const projectDropdown = document.getElementById("project-dropdown");
-
-        // projectButton.addEventListener('click', () => {
-        //     projectDropdown.classList.toggle("hidden");
-        // });
-
-        // // Navbar hide on scroll down and show on scroll up
-        // let lastScrollTop = 0;
-        // const navbar = document.getElementById("navbar");
-
-        // window.addEventListener("scroll", function () {
-        //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        //     if (scrollTop > lastScrollTop) {
-        //         navbar.classList.add("hidden"); // Hide navbar when scrolling down
-        //     } else {
-        //         navbar.classList.remove("hidden"); // Show navbar when scrolling up
-        //     }
-
-        //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent navbar from hiding when at the top
-        // });
-
-        document.addEventListener("DOMContentLoaded", function () {
-    let lastScrollTop = 0;
-    const navbar = document.getElementById("navbar");
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const dropdownNavbarLink = document.getElementById("dropdownNavbarLink");
-    const dropdownNavbar = document.getElementById("dropdownNavbar");
-
-    // Hide Navbar on Scroll Down, Show on Scroll Up
-    window.addEventListener("scroll", function () {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            navbar.style.transform = "translateY(-100%)";
-        } else {
-            navbar.style.transform = "translateY(0)";
+        // --- FITUR CV DOWNLOAD ---
+        const cvBtn = document.getElementById("downloadCV");
+        if (cvBtn) { // Cek dulu tombolnya ada gak di halaman ini
+            cvBtn.addEventListener("click", function () {
+                const link = document.createElement("a");
+                link.href = "assets/CV Zefa.pdf";
+                link.download = "CV_Hudzaifah.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
         }
-        lastScrollTop = scrollTop;
-    });
-
-    // Toggle Mobile Menu
-    menuToggle.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-    });
-
-    // Toggle Dropdown Menu di Mobile
-    dropdownNavbarLink.addEventListener("click", function (event) {
-        event.stopPropagation(); // Biar nggak nutup langsung
-        dropdownNavbar.classList.toggle("hidden");
-    });
-
-    // Tutup dropdown kalau klik di luar
-    document.addEventListener("click", function (event) {
-        if (!dropdownNavbar.contains(event.target) && !dropdownNavbarLink.contains(event.target)) {
-            dropdownNavbar.classList.add("hidden");
-        }
-    });
-});
-
     </script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+
+    <script src="components.js"></script>
+
+    <script src="script.js"></script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
     <script src="script.js"></script>
 
